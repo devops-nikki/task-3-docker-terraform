@@ -42,27 +42,35 @@ Make sure the following tools are installed on your system:
 ## Steps to run
 
 - Initialize Terraform 
+
  `terraform init | tee logs/init-log.txt`
 - Preview Changes
+
   `terraform plan`
 - Apply the Configuration
+
   `terraform apply | tee logs/apply-log.txt`
 - Verify Container is Running
+
   `docker ps`
  -You should see a container named nginx_container with PORTS like 0.0.0.0:8080->80/tcp.
 - Check Browser :-
+
   `Open: http://localhost:8080`
    - You should see the NGINX welcome page.
 - Destroy Resources
+
    `terraform destroy | tee logs/destroy-log.txt`
 
 ---
 
 ## 🔍 Terraform State Management
 - Check current Terraform state:
+
  `terraform state list`
 
 - View detailed resource info:
+
  `terraform show`
 
 The Terraform state file (terraform.tfstate) tracks resource metadata and helps Terraform manage lifecycle operations efficiently.
