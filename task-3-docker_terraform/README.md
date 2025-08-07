@@ -41,24 +41,20 @@ Make sure the following tools are installed on your system:
 
 ## Steps to run
 
-1. Initialize Terraform 
+- Initialize Terraform 
  `terraform init | tee logs/init-log.txt`
-2. Preview Changes
+- Preview Changes
   `terraform plan`
-3. Apply the Configuration
+- Apply the Configuration
   `terraform apply | tee logs/apply-log.txt`
-4. Verify Container is Running
+- Verify Container is Running
   `docker ps`
-You should see a container named nginx_container with PORTS like 0.0.0.0:8080->80/tcp.
-5. Check Browser :-
-
- `Open: http://localhost:8080`
-
-   You should see the NGINX welcome page.
-
-6. Destroy Resources
-
-  `terraform destroy | tee logs/destroy-log.txt`
+ -You should see a container named nginx_container with PORTS like 0.0.0.0:8080->80/tcp.
+- Check Browser :-
+  `Open: http://localhost:8080`
+   - You should see the NGINX welcome page.
+- Destroy Resources
+   `terraform destroy | tee logs/destroy-log.txt`
 
 ---
 
