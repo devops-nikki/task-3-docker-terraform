@@ -8,7 +8,7 @@ Provision a local Docker container using **Terraform** as Infrastructure as Code
 ## 🧰 Tools Used
 - [Terraform](https://developer.hashicorp.com/terraform/downloads)
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/)
-- Visual Studio Code (optional)
+- Visual Studio Code
 
 ---
 
@@ -50,24 +50,24 @@ Make sure the following tools are installed on your system:
 4. Verify Container is Running
   `docker ps`
 You should see a container named nginx_container with PORTS like 0.0.0.0:8080->80/tcp.
-5. Check Browser
-```
-Open: http://localhost:8080
+5. Check Browser :-
 
-You should see the NGINX welcome page
-```
+ `Open: http://localhost:8080`
+
+   You should see the NGINX welcome page.
+
 6. Destroy Resources
 
   `terraform destroy | tee logs/destroy-log.txt`
 
 ---
+
 ## 🔍 Terraform State Management
-Check current Terraform state:
+- Check current Terraform state:
+ `terraform state list`
 
-`terraform state list`
-View detailed resource info:
-
-`terraform show`
+- View detailed resource info:
+ `terraform show`
 
 The Terraform state file (terraform.tfstate) tracks resource metadata and helps Terraform manage lifecycle operations efficiently.
  
@@ -75,11 +75,11 @@ The Terraform state file (terraform.tfstate) tracks resource metadata and helps 
 
 ## 🎓 Key Learnings
 
-Understanding Infrastructure as Code (IaC) principles.
-Practical experience with Terraform providers and resources.
-Working knowledge of Terraform commands and lifecycle.
-Managing Docker containers declaratively.
-Importance and usage of Terraform state in resource tracking.
+- Understanding Infrastructure as Code (IaC) principles.
+- Practical experience with Terraform providers and resources.
+- Working knowledge of Terraform commands and lifecycle.
+- Managing Docker containers declaratively.
+- Importance and usage of Terraform state in resource tracking.
 
 ---
 
